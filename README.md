@@ -6,9 +6,10 @@ This is a litle benchmark of three Python libraries to compute great circle dist
 - GeographicLib.
 
 
-##IPython Notebook
-You see the IPython Notebook with all the computation and results in this link:
-[Link to IPython Notebook]()
+##Benchmark in a IPython Notebook
+You can see benchmark in a IPython Notebook with all computations and outputs in this link:
+
+[Link to IPython Notebook](http://nbviewer.ipython.org/github/cayetanobv/GeodeticMusings/blob/master/notebook/GeodeticMusings.ipynb)
 
 
 ##Script
