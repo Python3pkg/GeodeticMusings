@@ -27,17 +27,17 @@ from geographiclib.geodesic import Geodesic
 
 def grcrcl1(lon_1, lat_1, lon_2, lat_2):
     """
-    Great circle computation with Pyproj
+    Geodesic distance computation with Pyproj
     (python interface to PROJ4 C library)
     https://github.com/jswhit/pyproj
     
-    Great Circle calculations using Charles Karney 
+    Geodesic distance calculations using Charles Karney 
     geodesic algorithms:
         C. F. F. Karney, Algorithms for Geodesics, 
             J. Geodesy 87(1), 43–55 (Jan. 2013)
     
     PROJ4 C library routines used to compute 
-    great circles  are a simple transcription from 
+    geodesic distance  are a simple transcription from 
     C. Karney Geographiclib C++ Library
     https://trac.osgeo.org/proj/browser/trunk/proj/src/geodesic.h
     
@@ -60,10 +60,10 @@ def grcrcl1(lon_1, lat_1, lon_2, lat_2):
 
 def grcrcl2(startlong, startlat, endlong, endlat):
     """
-    Great circle computation with Pygc
+    Geodesic distance computation with Pygc
     https://github.com/axiom-data-science/pygc
     
-    Great Circle calculations using Vincenty's formulae:
+    Geodesic distance calculations using Vincenty's formulae:
         http://en.wikipedia.org/wiki/Vincenty%27s_formulae
     
     Default values used (WGS84):
@@ -84,11 +84,11 @@ def grcrcl2(startlong, startlat, endlong, endlat):
 
 def grcrcl3(lon_1, lat_1, lon_2, lat_2):
     """
-    Great circle computation with GeographicLib 
+    Geodesic distance computation with GeographicLib 
     (python interface to GeographicLib C++ library)
     http://geographiclib.sourceforge.net/html/other.html#python
     
-    Great Circle calculations using Charles Karney 
+    Geodesic distance calculations using Charles Karney 
     geodesic algorithms:
         C. F. F. Karney, Algorithms for Geodesics, 
             J. Geodesy 87(1), 43–55 (Jan. 2013)

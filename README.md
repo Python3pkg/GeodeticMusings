@@ -1,6 +1,6 @@
 #Geodetic musings
 
-This is a litle benchmark of three Python libraries to compute great circle distances:
+This is a litle benchmark of three Python libraries to compute geodesic distances:
 - Pyproj.
 - Pygc.
 - GeographicLib.
