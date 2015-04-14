@@ -16,7 +16,7 @@ You can see benchmark in a IPython Notebook with all computations and outputs in
 You can also launch the benchmark from shell:
 
 ```
-$ python greatcircledist.py
+$ python geodesicdist.py
 ```
 
 ##About author
