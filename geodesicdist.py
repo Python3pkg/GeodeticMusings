@@ -28,18 +28,26 @@ from geographiclib.geodesic import Geodesic
 def grcrcl1(lon_1, lat_1, lon_2, lat_2):
     """
     Geodesic distance computation with Pyproj
-    (python interface to PROJ4 C library)
+    (python interface to PROJ4 C library).
+    
     https://github.com/jswhit/pyproj
+    
+    PROJ4 C library (>= v.4.9.0) routines used to compute 
+    geodesic distances are a simple transcription from 
+    C. Karney Geographiclib C++ Library.
     
     Geodesic distance calculations using Charles Karney 
     geodesic algorithms:
         C. F. F. Karney, Algorithms for Geodesics, 
             J. Geodesy 87(1), 43–55 (Jan. 2013)
-    
-    PROJ4 C library routines used to compute 
-    geodesic distance  are a simple transcription from 
-    C. Karney Geographiclib C++ Library
     https://trac.osgeo.org/proj/browser/trunk/proj/src/geodesic.h
+    
+    PROJ4 C library (< v.4.9.0) routines used to compute 
+    geodesic distances are:
+        Paul D. Thomas, Spheroidal Geodesics, 
+            Reference Systems, and Local Geometry.
+            U.S. Naval Oceanographic Office, p. 162
+            Engineering Library 526.3 T36s (1970)
     
     Default values used (WGS84):
     https://github.com/jswhit/pyproj/blob/master/lib/pyproj/__init__.py
@@ -137,7 +145,9 @@ def main():
             [-6.,37.,-145.,11.],
             [-150.,37.,140.,11.],
             [-50.,7.,40.,11.],
-            [-100.,80.,-140.,30.]
+            [-100.,80.,-140.,30.],
+            [-3.6,40.5,-80.38,25.78],
+            [-3.6,40.5,-0.5,51.5]
         ]
 
     map(printResults, data)
