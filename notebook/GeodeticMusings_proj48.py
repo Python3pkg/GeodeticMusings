@@ -4,7 +4,7 @@
 # #Geodetic musings
 # 
 # This is a litle benchmark of three Python libraries to compute geodesic distances:
-# - Pyproj (with Proj4 v.4.9.1).
+# - Pyproj (with Proj4 v.4.8.0).
 # - Pygc.
 # - GeographicLib.
 
@@ -42,12 +42,12 @@
 #    - Semi-minor axis: 6356752.314245179
 #    - Flattening: 0.0033528106647474805
 
-# In[2]:
+# In[1]:
 
 from pyproj import Geod
 
 
-# In[3]:
+# In[4]:
 
 def grcrcl1(lon_1, lat_1, lon_2, lat_2):
     
@@ -76,7 +76,7 @@ def grcrcl1(lon_1, lat_1, lon_2, lat_2):
 #    - Flattening: 0.0033528106718309896
 #    - Inverse flattening: 298.2572229328697
 
-# In[4]:
+# In[2]:
 
 from pygc import great_distance
 
@@ -111,12 +111,12 @@ def grcrcl2(startlong, startlat, endlong, endlat):
 #    - Semi-minor axis: 6356752.314245179
 #    - Flattening: 0.0033528106647474805
 
-# In[6]:
+# In[3]:
 
 from geographiclib.geodesic import Geodesic
 
 
-# In[7]:
+# In[6]:
 
 def grcrcl3(lon_1, lat_1, lon_2, lat_2):
     
@@ -128,7 +128,7 @@ def grcrcl3(lon_1, lat_1, lon_2, lat_2):
 # ##Results
 # Function to print results from geodesic distance functions:
 
-# In[8]:
+# In[7]:
 
 def printResults(input_coords):
     
@@ -154,7 +154,7 @@ def printResults(input_coords):
 #  - End longitude.
 #  - End latitude.
 
-# In[9]:
+# In[8]:
 
 data = [
         [-3.6,40.5,-118.4,33.9],
@@ -167,11 +167,11 @@ data = [
 
 # Printing three functions results with created test data:
 
-# In[10]:
+# In[11]:
 
 map(printResults, data)
 
 
 # ##Discussion
 # 
-# As it was expected there are no difference betwen Pyproj and GeographicLib outcomes. However there are a minimal difference between Pygc and Pyproj/Geographiclib.
+# There are minor differences in outcomes though curiously the most puzzling is that the highest dissimilarity occur between Pyproj and GeographicLib which is using the same algorithms in newer versions (>= 4.9.0). There are a minimal difference between Pygc and Geographiclib.
