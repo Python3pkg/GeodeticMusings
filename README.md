@@ -24,6 +24,11 @@ You can also launch the benchmark from shell:
 $ python geodesicdist.py
 ```
 
+You can test different Proj4 versions here:
+
+https://github.com/GeographicaGS/Docker-Proj4
+
+
 ##About author
 Developed by Cayetano Benavent.
 GIS Analyst at Geographica.
