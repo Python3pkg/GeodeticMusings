@@ -128,14 +128,14 @@ def printResults(input_coords):
     dist2 = grcrcl2(lon_1, lat_1, lon_2, lat_2)
     dist3 = grcrcl3(lon_1, lat_1, lon_2, lat_2)
     
-    print "Distances for: lon_1 {0}, lat_1 {1}, lon_2 {2}, lat_2 {3}\n".format(lon_1, lat_1, lon_2, lat_2)
-    print "Pyproj___________________________{:,.10f} m\n".format(dist1)
-    print "Pygc_____________________________{:,.10f} m\n".format(dist2)
-    print "GeographicLib____________________{:,.10f} m\n".format(dist3)
-    print "Difference Pyproj,Pygc___________{:.15f} m\n".format(abs(dist1 - dist2))
-    print "Difference Pyproj,GeographicLib__{:.15f} m\n".format(abs(dist1 - dist3))
-    print "Difference GeographicLib,Pygc____{:.15f} m\n".format(abs(dist3 - dist2))
-    print "------------------------------------------\n"
+    print("Distances for: lon_1 {0}, lat_1 {1}, lon_2 {2}, lat_2 {3}\n".format(lon_1, lat_1, lon_2, lat_2))
+    print("Pyproj___________________________{:,.10f} m\n".format(dist1))
+    print("Pygc_____________________________{:,.10f} m\n".format(dist2))
+    print("GeographicLib____________________{:,.10f} m\n".format(dist3))
+    print("Difference Pyproj,Pygc___________{:.15f} m\n".format(abs(dist1 - dist2)))
+    print("Difference Pyproj,GeographicLib__{:.15f} m\n".format(abs(dist1 - dist3)))
+    print("Difference GeographicLib,Pygc____{:.15f} m\n".format(abs(dist3 - dist2)))
+    print("------------------------------------------\n")
 
 
 def main():
@@ -150,7 +150,7 @@ def main():
             [-3.6,40.5,-0.5,51.5]
         ]
 
-    map(printResults, data)
+    list(map(printResults, data))
 
 
 
